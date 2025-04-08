@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pilau Recipe | Mary Aphline Atieno</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="script.js" defer></script>
+  <style>
+    header {
+      background-color: #0047AB;
+      padding: 1rem 0;
+    }
+    header h1, nav a { color: white; }
+    nav a:hover, nav a.active { color: #89CFF0; }
+    nav a.active::after { background-color: #89CFF0; }
+    footer { background-color: #0047AB; }
+
+    .recipe-actions {
+      display: flex; gap: 1rem; margin: 1rem 0;
+    }
+    .action-btn {
+      background: var(--light, #E0F7FA);
+      border: 1px solid #ddd;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .action-btn:hover {
+      background: var(--primary, #0047AB);
+      color: white;
+      border-color: var(--primary, #0047AB);
+    }
+    .recipe-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+      background: rgba(255,255,255,0.1);
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .nutrition-3d {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1), 0 10px 20px rgba(0,0,0,0.08);
+      transform: perspective(1000px) rotateX(5deg);
+      border-left: 4px solid #0047AB;
+      margin: 2rem 0;
+    }
+    .nutrition-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+    }
+    .nutrient-card {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .nutrient-value {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+    .nutrient-label { font-size: 0.9rem; color: #666; }
+    .glitch-button {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      color: white;
+      background-color: #0047AB;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      position: relative;
+      overflow: hidden;
+      margin-top: 2rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .glitch-button:hover::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: #89CFF0;
+      mix-blend-mode: difference;
+      animation: glitch 0.5s infinite;
+    }
+    @keyframes glitch {
+      0% { transform: translate(0, 0); }
+      20% { transform: translate(-2px, 2px); }
+      40% { transform: translate(-2px, -2px); }
+      60% { transform: translate(2px, 2px); }
+      80% { transform: translate(2px, -2px); }
+      100% { transform: translate(0, 0); }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>Mary Aphline Atieno</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="recipe-page">
+  <div class="container">
+    <div class="recipe-header">
+      <h1>Pilau (East African Spiced Rice)</h1>
+      <p class="recipe-description">Fragrant, beefy, perfectly spiced rice straight from East Africa. Trust — this is a whole vibe. 🍚🔥</p>
+
+      <div class="recipe-actions">
+        <button class="action-btn" onclick="window.print()">
+          <i class="fas fa-print"></i> Print
+        </button>
+        <button class="action-btn" onclick="window.location.href='mailto:?subject=Pilau Recipe&body=Check out this fire recipe: ' + window.location.href;">
+          <i class="fas fa-envelope"></i> Share
+        </button>
+      </div>
+
+      <div class="recipe-meta-grid">
+        <div><strong>Course</strong>Main Dish</div>
+        <div><strong>Cuisine</strong>East African</div>
+        <div><strong>Prep Time</strong>20 minutes</div>
+        <div><strong>Cook Time</strong>30 minutes</div>
+        <div><strong>Total Time</strong>50 minutes</div>
+        <div><strong>Servings</strong>5 servings</div>
+        <div><strong>Calories</strong>366 kcal</div>
+      </div>
+
+      <img src="8fe09ed1-ae1e-4d92-aaa4-537193e74d3b.jpg" alt="Pilau Dish" class="recipe-hero">
+    </div>
+
+    <div class="recipe-content">
+      <div class="ingredients">
+        <h2><i class="fas fa-shopping-basket"></i> Ingredients</h2>
+        <ul>
+          <li>1 tsp cloves, 2 tbsp cumin seeds, 1/2 tbsp black peppercorns, 12 cardamom pods, 1 cinnamon stick</li>
+          <li>2 cups basmati rice</li>
+          <li>5 potatoes (quartered)</li>
+          <li>¼ cup vegetable oil</li>
+          <li>2 red onions (sliced)</li>
+          <li>4 cloves garlic (minced)</li>
+          <li>2 tbsp ginger (minced)</li>
+          <li>1 serrano chile (chopped)</li>
+          <li>1 tbsp pilau masala</li>
+          <li>2 beef stock cubes</li>
+          <li>1 lb beef sirloin (cubed)</li>
+          <li>3 Roma tomatoes (diced)</li>
+          <li>4 cups water</li>
+          <li>2 bay leaves</li>
+          <li>Salt to taste</li>
+        </ul>
+      </div>
+
+      <div class="instructions">
+        <h2><i class="fas fa-list-ol"></i> Instructions</h2>
+        <ol>
+          <li>Roast spices lightly and grind them into Pilau Masala.</li>
+          <li>Heat oil, fry onions until golden.</li>
+          <li>Add garlic, ginger, serrano chile, cook until fragrant.</li>
+          <li>Add beef, pilau masala, stock cubes, bay leaves, and salt. Brown the meat.</li>
+          <li>Mix in tomatoes, cook till they release juices.</li>
+          <li>Add potatoes and water. Boil for 10 mins.</li>
+          <li>Stir in rice, cover tightly with foil. Cook on low for 20 mins.</li>
+          <li>Fluff with a fork and serve hot with fresh Kachumbari!</li>
+        </ol>
+      </div>
+
+      <div class="nutrition-3d">
+        <h2><i class="fas fa-chart-pie"></i> Nutrition Facts (per serving)</h2>
+        <div class="nutrition-grid">
+          <div class="nutrient-card"><div class="nutrient-value">366</div><div class="nutrient-label">Calories</div></div>
+          <div class="nutrient-card"><div class="nutrient-value">59g</div><div class="nutrient-label">Carbs</div></div>
+          <div class="nutrient-card"><div class="nutrient-value">22.5g</div><div class="nutrient-label">Protein</div></div>
+          <div class="nutrient-card"><div class="nutrient-value">3.9g</div><div class="nutrient-label">Fat</div></div>
+          <div class="nutrient-card"><div class="nutrient-value">3.4g</div><div class="nutrient-label">Fiber</div></div>
+          <div class="nutrient-card"><div class="nutrient-value">2.8g</div><div class="nutrient-label">Sugar</div></div>
+          <div class="nutrient-card"><div class="nutrient-value">771mg</div><div class="nutrient-label">Sodium</div></div>
+        </div>
+      </div>
+
+      <a href="menu.html" class="glitch-button"><i class="fas fa-arrow-left"></i> Back to Recipes</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2025 Mary Aphline Atieno | <a href="https://instagram.com/aphlinelola" target="_blank"><i class="fab fa-instagram"></i></a></p>
+  </div>
+</footer>
+</body>
+</html>

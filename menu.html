@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes | Mary Aphline Atieno</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script.js" defer></script>
+    <style>
+        /* Blue Header & Footer Only */
+        header {
+            background-color: #0047AB;
+            padding: 1rem 0;
+        }
+        header h1, nav a {
+            color: white;
+        }
+        nav a:hover, nav a.active {
+            color: #89CFF0;
+        }
+        nav a.active::after {
+            background-color: #89CFF0;
+        }
+        footer {
+            background-color: #0047AB;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mary Aphline Atieno</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html" class="active">Menu</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="menu">
+        <div class="container">
+            <h1>My Favorite Dishes 🍚🍖</h1>
+            <p>Tap a card to get all the juicy details!</p>
+
+            <div class="recipe-cards">
+                <a href="pilau.html" class="recipe-card">
+                    <div class="card-image">
+                        <img src="pilau.jpg" alt="Pilau">
+                    </div>
+                    <div class="card-content">
+                        <h3>Pilau</h3>
+                        <div class="recipe-meta">
+                            <span><i class="fas fa-clock"></i> 50 mins</span>
+                            <span><i class="fas fa-users"></i> Serves 5</span>
+                        </div>
+                        <div class="hover-details">
+                            <p>Spiced rice cooked with tender beef and mad flavor. A certified classic. 🍚🔥</p>
+                            <span class="view-recipe">View Recipe →</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="korean-bbq.html" class="recipe-card">
+                    <div class="card-image">
+                        <img src="ribs.jpg" alt="Korean BBQ Marinated Beef Short Ribs">
+                    </div>
+                    <div class="card-content">
+                        <h3>Korean BBQ Beef Short Ribs</h3>
+                        <div class="recipe-meta">
+                            <span><i class="fas fa-clock"></i> 3 hrs marination + 20 mins cook</span>
+                            <span><i class="fas fa-users"></i> Serves 4</span>
+                        </div>
+                        <div class="hover-details">
+                            <p>Juicy, smoky ribs marinated in sweet and spicy Korean BBQ sauce. Next-level vibes. 🍖✨</p>
+                            <span class="view-recipe">View Recipe →</span>
+                        </div>
+                    </div> 
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mary Aphline Atieno | 
+                <a href="https://instagram.com/aphlinelola" target="_blank"><i class="fab fa-instagram"></i></a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
